@@ -1,0 +1,8 @@
+svg{
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+svg:hover{
+  scale: 1.1;
+}

@@ -1,0 +1,21 @@
+
+.sliderArrowsLeft {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: -3%;
+}
+
+.sliderArrowsRight {
+  cursor: pointer;
+  position: absolute;
+  transform: rotate(180deg);
+  top: 50%;
+  right: -3%;
+}
+
+
+.sliderArrowsLeft:hover path,
+.sliderArrowsRight:hover path {
+  fill: #93afeb;
+}

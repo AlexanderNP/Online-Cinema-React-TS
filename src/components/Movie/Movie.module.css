@@ -1,0 +1,227 @@
+.section {
+  position: relative;
+  padding: 1.3vw 0;
+}
+
+.section svg {
+  position: absolute;
+  top: 4%;
+  right: 1%;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  opacity: 0.2;
+  width: 944px;
+  height: 896px;
+  left: -660px;
+  top: -300px;
+  background: url("../../../public/Gradient.svg");
+}
+
+.movieBackground {
+  position: absolute;
+  width: 100%;
+  height: 933px;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 4.5%;
+  background: radial-gradient(
+    50.61% 75.56% at 58.99999999999999% 52%,
+    rgba(1, 15, 41, 0),
+    rgb(1, 15, 41) 77%,
+    rgb(1, 15, 41) 90%
+  );
+  z-index: -1;
+}
+
+.movieBackgroundImg {
+  position: absolute;
+  z-index: -2;
+  width: 1920px;
+  height: 933px;
+  left: 20%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  filter: opacity(60%) contrast(80%);
+}
+
+.movieContainer {
+  display: flex;
+  justify-content: end;
+}
+
+.description {
+  max-width: 31.25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.description h2 {
+  font-size: 2.5vw;
+  font-weight: 700;
+  line-height: 3.39vw;
+  margin-bottom: 1.04vw;
+}
+
+.description p {
+  max-width: 31.25vw;
+  color: rgb(255, 255, 255);
+  margin-bottom: 0.52vw;
+  font-size: 1.04vw;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+
+.description p:first-of-type {
+  font-size: 1.67vw;
+  font-weight: 600;
+  opacity: 0.9;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.description span {
+  margin-left: 0.26vw;
+  opacity: 0.9;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.movieContainer iframe {
+  box-shadow: 0px 24px 48px 0px rgba(99, 60, 247, 0.15);
+  border-radius: 0.3vw;
+}
+
+.moon {
+  position: absolute;
+  color: #ffd;
+  background: radial-gradient(
+    circle at -30% 50%,
+    rgba(0, 0, 0, 0) 175px,
+    currentColor 100%
+  );
+  z-index: 999;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  left: -6%;
+  top: 12%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 0 20px currentColor);
+}
+
+.btnHomeContain {
+  position: absolute;
+  bottom: 5.60vw;
+  left: -5.60vw;
+}
+
+.btnHome {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 13.02vw;
+  height: 2.60vw;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.83vw;
+}
+
+.btnHome a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0.78vw 0.78vw rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.56vw;
+  padding: 0.52vw;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 400;
+  z-index: 1;
+  transition: 0.5s;
+  backdrop-filter: blur(15px);
+}
+.btnHome:hover a {
+  color: rgb(24, 23, 23);
+  letter-spacing: 3px;
+}
+.btnHome a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translate(0);
+  transition: 0.5s;
+  filter: blur(0px);
+}
+
+.btnHome:hover a::before {
+	transform: skewX(45deg) translate(200px);
+}
+
+.btnHome::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: -0.26vw;
+  width: 1.56vw;
+  height: 0.52vw;
+  border-radius: 0.52vw;
+  transition: 0.5s;
+  transition-delay: 0.5;
+}
+.btnHome:hover::before /*lightup button*/ {
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 1.56vw;
+}
+
+.btnHome::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  top: -0.26vw;
+  width: 1.56vw;
+  height: 0.52vw;
+  background: #f00;
+  border-radius: 0.52vw;
+  transition: 0.5s;
+  transition-delay: 0.5;
+}
+.btnHome:hover::after /*lightup button*/ {
+  top: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 1.56vw;
+}
+
+.btnHome::before,
+.btnHome::after {
+  background: #ffd;
+  box-shadow: 0 0 5px #ffd, 0 0 15px #ffd, 0 0 30px #ffd,
+    0 0 60px #ffd;
+}
