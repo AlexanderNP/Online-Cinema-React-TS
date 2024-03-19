@@ -1,4 +1,3 @@
-import React, { FC } from "react";
 import "./FavoriteSVG.css";
 
 interface FavoriteSVGProps {
@@ -6,7 +5,7 @@ interface FavoriteSVGProps {
   style?: string | undefined;
 }
 
-export const FavoriteSVG: FC<FavoriteSVGProps> = ({ onClick, style }) => {
+export const FavoriteSVG = ({ onClick, style }: FavoriteSVGProps) => {
   return (
     <svg
       onClick={onClick}

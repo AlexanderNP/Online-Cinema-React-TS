@@ -1,4 +1,3 @@
-import { FC } from "react";
 import "./Input.css";
 
 interface InputProps {
@@ -8,7 +7,7 @@ interface InputProps {
 }
 
 
-export const Input: FC <InputProps> = ({value, onChange, onFocus} ) => {
+export const Input = ({value, onChange, onFocus}: InputProps ) => {
   return (
     <input className="searchInput" 
           value={value}

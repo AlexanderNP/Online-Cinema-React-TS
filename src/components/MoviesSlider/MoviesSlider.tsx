@@ -2,13 +2,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./MoviesSlider.css";
-import React, { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { IMovies } from "../../utils/models/moviesInterface";
 import { MoviesItem } from "../MoviesItem/MoviesItem";
 import { SliderArrow } from "../UI/SliderArrow/SliderArrow";
 import { cinemaService } from "../../utils/api/cinemaServise";
 
-export const MoviesSlider: FC = () => {
+export const MoviesSlider = () => {
   const [data, setData] = useState<IMovies | null>(null);
   const [isLoading, setIsLodaing] = useState(true);
   const [error, setError] = useState("");
@@ -35,7 +35,7 @@ export const MoviesSlider: FC = () => {
   if (isLoading) {
     return (
       <div className="moviesContain">
-        <h2 className="title">ALL MOVIES</h2>
+        <h2 className="title">TOP 20 Movies</h2>
         <span className="loader"></span>
       </div>
     );

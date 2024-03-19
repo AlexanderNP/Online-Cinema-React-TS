@@ -15,7 +15,7 @@ export const cinemaFavouritesSlice = createSlice({
   name: "movies",
   initialState,
   reducers: {
-    addCinema: (state, action: PayloadAction<IMoviesFavorites>) => {
+    addCinema: (state: MoviesState, action: PayloadAction<IMoviesFavorites>) => {
       if (!moviesExists(state.movies, action.payload.id)) {
         state.movies.push({
           id: action.payload.id,
@@ -24,7 +24,7 @@ export const cinemaFavouritesSlice = createSlice({
         });
       }
     },
-    removeCinema: (state, action: PayloadAction<IMoviesFavorites>) => {
+    removeCinema: (state: MoviesState, action: PayloadAction<IMoviesFavorites>) => {
       console.log(action.payload.id);
       state.movies = state.movies.filter(
         (movie) => movie.id !== action.payload.id

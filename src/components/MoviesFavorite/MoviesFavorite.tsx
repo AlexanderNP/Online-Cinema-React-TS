@@ -1,4 +1,3 @@
-import { FC } from "react";
 import styles from "./MoviesFavorite.module.css";
 import { IMoviesFavorites } from "../../utils/models/moviesFavoritesInterface";
 import { Link } from "react-router-dom";
@@ -10,7 +9,7 @@ interface MoviesFavoriteProps {
   path: string;
 }
 
-export const MoviesFavorite: FC<MoviesFavoriteProps> = ({ movie, path }) => {
+export const MoviesFavorite = ({ movie, path }: MoviesFavoriteProps) => {
   const dispatch = useAppDispatch();
 
   return (
@@ -23,7 +22,7 @@ export const MoviesFavorite: FC<MoviesFavoriteProps> = ({ movie, path }) => {
           imgUrl: ""
         }))}
       >
-        <img src="/deleteFavorite.svg" alt="" />
+        <img src="./deleteFavorite.svg" alt="" />
       </div>
       <Link to={path}>
         <div className={styles.movieModalContain}>

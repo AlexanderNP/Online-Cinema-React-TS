@@ -1,4 +1,3 @@
-import { FC } from "react";
 import styles from "./MoviesSearchItem.module.css";
 import { Link } from "react-router-dom";
 import { IMoviesData } from "../../../utils/models/moviesInterface";
@@ -12,10 +11,7 @@ interface MoviesSearchItemProps {
   path: string;
 }
 
-export const MoviesSearchItem: FC<MoviesSearchItemProps> = ({
-  movie,
-  path,
-}) => {
+export const MoviesSearchItem = ({ movie, path }: MoviesSearchItemProps) => {
   const state = useAppSelector((state) => state.movies.movies);
 
   const dispatch = useAppDispatch();

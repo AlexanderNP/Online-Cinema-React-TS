@@ -12,7 +12,7 @@ interface MovieProps {
   movie: IMoviesData;
 }
 
-export const Movie: FC<MovieProps> = ({ movie }) => {
+export const Movie = ({ movie }: MovieProps) => {
   const state = useAppSelector((state) => state.movies.movies);
 
   const dispatch = useAppDispatch();

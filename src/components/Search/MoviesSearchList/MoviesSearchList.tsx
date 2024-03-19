@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { IMoviesData } from "../../../utils/models/moviesInterface";
 import { cinemaService } from "../../../utils/api/cinemaServise";
 import { MoviesSearchItem } from "../MoviesSearchItem/MoviesSearchItem";
@@ -9,7 +9,7 @@ interface MoviesSearchListProps {
   search: string;
 }
 
-export const MoviesSearchList: FC<MoviesSearchListProps> = ({ search }) => {
+export const MoviesSearchList = ({ search }: MoviesSearchListProps) => {
   const [data, setData] = useState<IMoviesData[]>([]);
   const [isLoading, setIsLodaing] = useState(true);
   const [error, setError] = useState("");

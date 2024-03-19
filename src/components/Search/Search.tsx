@@ -1,10 +1,10 @@
-import React, { FC, useState } from "react";
+import { useState } from "react";
 import { useInput } from "../../hooks/useInput";
 import { Input } from "../UI/Input/Input";
 import { SearchDropDown } from "./SearchDropDown/SearchDropDown";
 import { MoviesSearchList } from "./MoviesSearchList/MoviesSearchList";
 
-export const Search: FC = () => {
+export const Search = () => {
   const { value, handlerChange, handlerClear } = useInput("");
   const [isShowDropDown, setIsShowDropDown] = useState(false);
 

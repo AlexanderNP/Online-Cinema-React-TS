@@ -1,4 +1,3 @@
-import React, { FC } from 'react'
 import styles from './SliderArrow.module.css'
 
 interface SliderArrowProps{
@@ -6,7 +5,7 @@ interface SliderArrowProps{
   onClick?: () => void;
 }
 
-export const SliderArrow:FC<SliderArrowProps> = ({ onClick, direction }) => {
+export const SliderArrow = ({ onClick, direction }: SliderArrowProps) => {
   return (
     <div className={styles.sliderArrows} onClick={onClick}>
       {direction === "left" ? (

@@ -1,11 +1,11 @@
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { cinemaService } from "../../utils/api/cinemaServise";
 import { MoviesItem } from "../MoviesItem/MoviesItem";
 import List from "../List/List";
 import { IMoviesData } from "../../utils/models/moviesInterface";
 import styles from "./MoviesList.module.css";;
 
-export const MoviesList:FC = () => {
+export const MoviesList = () => {
   const [data, setData] = useState<IMoviesData[]>([]);
   const [isLoading, setIsLodaing] = useState(true);
   const [error, setError] = useState("");
@@ -63,7 +63,6 @@ export const MoviesList:FC = () => {
     return <h1>{error}</h1>;
   }
 
-  console.log(data)
   return (
     <div className={styles.moviesContain}>
       <h2 className={styles.title}>ALL MOVIES</h2>

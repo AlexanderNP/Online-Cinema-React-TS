@@ -1,5 +1,4 @@
-import React, { FC } from "react";
-import { IMoviesData, IMoviesMedia } from "../../utils/models/moviesInterface";
+import { IMoviesData} from "../../utils/models/moviesInterface";
 import styles from "./MoviesItem.module.css";
 import { Link } from "react-router-dom";
 interface MoviesItemProps {
@@ -7,7 +6,7 @@ interface MoviesItemProps {
   path: string;
 }
 
-export const MoviesItem: FC<MoviesItemProps> = ({ movie, path }) => {
+export const MoviesItem = ({ movie, path }: MoviesItemProps) => {
 
   return (
     <Link to={path}>

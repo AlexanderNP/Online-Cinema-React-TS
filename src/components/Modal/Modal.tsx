@@ -1,13 +1,13 @@
 import { createPortal } from "react-dom";
 import styles from "./Modal.module.css";
-import React, { FC, MouseEvent, useEffect, useRef } from "react";
+import React, { MouseEvent, useEffect, useRef } from "react";
 
 interface ModalProps {
   children: React.ReactNode;
   close: () => void;
 }
 
-export const Modal: FC<ModalProps> = ({ children, close }) => {
+export const Modal = ({ children, close }: ModalProps) => {
   const containerRef = useRef(null);
 
   useEffect(() => {

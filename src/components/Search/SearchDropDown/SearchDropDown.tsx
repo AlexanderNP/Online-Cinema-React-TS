@@ -1,13 +1,13 @@
 import { createPortal } from "react-dom";
 import styles from "./SearchDropDown.module.css";
-import React, { FC, MouseEvent, useEffect, useRef } from "react";
+import React, { MouseEvent, useEffect, useRef } from "react";
 
 interface SearchDropDownProps {
   children: React.ReactNode;
   close: () => void;
 }
 
-export const SearchDropDown: FC<SearchDropDownProps> = ({ children, close }) => {
+export const SearchDropDown = ({ children, close }: SearchDropDownProps) => {
 
   const overlayRef = useRef(null);
 

@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import { Logo } from "../UI/Logo/Logo";
 import styles from "./Header.module.css";
 import { FavoriteSVG } from "../UI/FavoriteSVG/FavoriteSVG";
@@ -8,7 +8,7 @@ import { MoviesFavorite } from "../MoviesFavorite/MoviesFavorite";
 import { IMoviesFavorites } from "../../utils/models/moviesFavoritesInterface";
 import { Search } from "../Search/Search";
 
-export const Header: FC = () => {
+export const Header = () => {
   const [isShowModal, setIsShowModal] = useState(false);
 
   const movies = useAppSelector((state) => state.movies.movies);
